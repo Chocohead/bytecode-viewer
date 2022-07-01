@@ -4,9 +4,9 @@ name: Build BCV
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, add-quiltflower-support ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, add-quiltflower-support ]
 
 jobs:
   build:
