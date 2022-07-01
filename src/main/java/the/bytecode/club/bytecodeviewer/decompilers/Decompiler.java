@@ -42,6 +42,7 @@ public enum Decompiler
     JD_DECOMPILER("JD-GUI Decompiler", "jdgui", new JDGUIDecompiler()),
     JADX_DECOMPILER("JADX Decompiler", "jadx", new JADXDecompiler()),
     ASM_TEXTIFY_DISASSEMBLER("ASM Disassembler", "asm", new ASMTextifierDisassembler()),
+    ASMIFIER_DECOMPILER("ASMifier Generator", "asmifier", new ASMifierGenerator()),
     JAVAP_DISASSEMBLER("Javap Disassembler", "javap", new JavapDisassembler()),
     ;
     

@@ -55,6 +55,7 @@ public enum TranslatedStrings
 	HEXCODE,
 	BYTECODE,
 	ASM_TEXTIFY,
+	ASMIFIER,
 	ERROR,
 	DISASSEMBLER,
 	RESULTS,
