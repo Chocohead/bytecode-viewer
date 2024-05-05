@@ -1,27 +1,13 @@
 package the.bytecode.club.bytecodeviewer.gui;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.KeyboardFocusManager;
+import java.awt.*;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JSeparator;
-import javax.swing.JSpinner;
-import javax.swing.JSplitPane;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
 import the.bytecode.club.bytecodeviewer.BytecodeViewer;
 import the.bytecode.club.bytecodeviewer.Configuration;
 import the.bytecode.club.bytecodeviewer.Constants;
@@ -116,7 +102,7 @@ public class MainViewerGUI extends JFrame
     public final SearchBoxPane searchBoxPane = new SearchBoxPane();
     public JSplitPane splitPane1;
     public JSplitPane splitPane2;
-    
+
     //the root menu bar
     public final JMenuBar rootMenu = new JMenuBar();
     
@@ -375,9 +361,12 @@ public class MainViewerGUI extends JFrame
         searchBoxPane.setPreferredSize(new Dimension(200, 50));
         searchBoxPane.setMinimumSize(new Dimension(200, 50));
         searchBoxPane.setMaximumSize(new Dimension(200, 2147483647));
-        
+
+        workPane.setPreferredSize(new Dimension(1500, 1000));
+
         splitPane1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT, resourcePane, searchBoxPane);
         splitPane2 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, splitPane1, workPane);
+
         getContentPane().add(splitPane2);
         splitPane2.setResizeWeight(0.05);
         splitPane1.setResizeWeight(0.5);
@@ -486,6 +475,19 @@ public class MainViewerGUI extends JFrame
         fontSpinner.setPreferredSize(new Dimension(60, 24));
         fontSpinner.setMinimumSize(new Dimension(60, 24));
         fontSpinner.setModel(new SpinnerNumberModel(12, 1, null, 1));
+        fontSpinner.addChangeListener(e -> {
+			JSpinner spinner = (JSpinner) e.getSource();
+			Font font = UIManager.getFont("defaultFont");
+			if (font == null) {
+				font = UIManager.getFont("Label.font");
+			}
+
+			font = font.deriveFont((float) (int) spinner.getValue());
+
+			BytecodeViewer.updateAllFonts(font);
+			BytecodeViewer.updateUI();
+            BytecodeViewer.refreshAllTabs();
+		});
         fontSize.add(fontSpinner);
         
         apkConversionSecondaryMenu.add(decodeAPKResources);

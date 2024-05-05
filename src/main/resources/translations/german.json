@@ -96,6 +96,7 @@
   "HEXCODE": "Hexcode",
   "BYTECODE": "Bytecode",
   "ASM_TEXTIFY": "ASM Textify",
+  "ASMIFIER": "ASMifier",
 
   "BYTECODE_DECOMPILER": "Bytecode-Dekompilierer",
   "DEBUG_HELPERS": "Debug-Helfer",
@@ -285,5 +286,6 @@
   "MATCH_CASE": "Groß-/Kleinschreibung beachten",
   "EXACT_PATH": "Genauer Pfad",
   "MIN_SDK_VERSION": "Minimale SDK-Version",
-  "PRINT_LINE_NUMBERS": "Zeilennummern einschließen"
+  "PRINT_LINE_NUMBERS": "Zeilennummern einschließen",
+  "AUTO_OPEN": "Automatisch öffnen"
 }

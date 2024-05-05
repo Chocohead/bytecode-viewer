@@ -2,14 +2,14 @@ package the.bytecode.club.bytecodeviewer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedHashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
+
 import me.konloch.kontainer.io.DiskReader;
 import org.apache.commons.io.FileUtils;
 import org.objectweb.asm.tree.ClassNode;
@@ -22,6 +22,8 @@ import the.bytecode.club.bytecodeviewer.bootloader.UpdateCheck;
 import the.bytecode.club.bytecodeviewer.gui.MainViewerGUI;
 import the.bytecode.club.bytecodeviewer.gui.components.ExtendedJOptionPane;
 import the.bytecode.club.bytecodeviewer.gui.components.MultipleChoiceDialog;
+import the.bytecode.club.bytecodeviewer.gui.components.SearchableJTextArea;
+import the.bytecode.club.bytecodeviewer.gui.components.SearchableRSyntaxTextArea;
 import the.bytecode.club.bytecodeviewer.gui.resourcelist.ResourceListIconRenderer;
 import the.bytecode.club.bytecodeviewer.gui.resourceviewer.TabbedPane;
 import the.bytecode.club.bytecodeviewer.gui.resourceviewer.viewer.ClassViewer;
@@ -129,8 +131,6 @@ import static the.bytecode.club.bytecodeviewer.Constants.tempDirectory;
 
 public class BytecodeViewer
 {
-    //TODO fix this for tab dragging & better tab controls
-    public static boolean EXPERIMENTAL_TAB_CODE = false;
     
     //the launch args called on BCV
     public static String[] launchArgs;
@@ -198,7 +198,7 @@ public class BytecodeViewer
             
             //setup swing components
             viewer = new MainViewerGUI();
-            SwingUtilities.updateComponentTreeUI(viewer);
+            //SwingUtilities.updateComponentTreeUI(viewer);
             
             //load settings and set swing components state
             SettingsSerializer.loadSettings();
@@ -675,7 +675,7 @@ public class BytecodeViewer
     }
     
     /**
-     * Refreshes the title on all of the opened tabs
+     * Refreshes all the opened tabs
      */
     public static void refreshAllTabs()
     {
@@ -684,7 +684,7 @@ public class BytecodeViewer
             updateBusyStatus(true);
             for (int i = 0; i < BytecodeViewer.viewer.workPane.tabs.getTabCount(); i++)
             {
-                ResourceViewer viewer = ((TabbedPane) BytecodeViewer.viewer.workPane.tabs.getTabComponentAt(i)).resource;
+                ResourceViewer viewer = (ResourceViewer) BytecodeViewer.viewer.workPane.tabs.getComponentAt(i);
                 viewer.refresh(null);
             }
             updateBusyStatus(false);
@@ -753,4 +753,31 @@ public class BytecodeViewer
      * because Smali and Baksmali System.exit if it failed
      */
     public static void exit(int i) { }
+
+    /**
+     * Updates all UI components fonts.
+     *
+     * @implNote {@link SearchableRSyntaxTextArea} and {@link SearchableJTextArea}
+     * do not update until "Refresh" button is clicked.
+     *
+     * @param font The font to change everything to.
+     */
+    public static void updateAllFonts(Font font) {
+        Enumeration<Object> enumeration = UIManager.getDefaults().keys();
+        while (enumeration.hasMoreElements()) {
+            Object key = enumeration.nextElement();
+            Object value = UIManager.get (key);
+            if (value instanceof Font)
+                UIManager.put (key, font);
+        }
+    }
+
+    /**
+     * Updates all swing components.
+     */
+    public static void updateUI() {
+        for (Window w : Window.getWindows()) {
+            SwingUtilities.updateComponentTreeUI(w);
+        }
+    }
 }

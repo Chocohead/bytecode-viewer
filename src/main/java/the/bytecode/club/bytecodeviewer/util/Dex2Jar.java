@@ -1,7 +1,13 @@
 package the.bytecode.club.bytecodeviewer.util;
 
+import com.googlecode.d2j.DexException;
+import com.googlecode.d2j.Method;
 import com.googlecode.d2j.dex.Dex2jar;
+import com.googlecode.d2j.dex.DexExceptionHandler;
+import com.googlecode.d2j.node.DexMethodNode;
+import com.googlecode.dex2jar.tools.Jar2Dex;
 import java.io.File;
+import org.objectweb.asm.MethodVisitor;
 import the.bytecode.club.bytecodeviewer.BytecodeViewer;
 
 /***************************************************************************
@@ -38,9 +44,20 @@ public class Dex2Jar {
      */
     public static synchronized void dex2Jar(File input, File output) {
         try {
-            Dex2jar d2Jar = Dex2jar.from(input);
+            Dex2jar d2Jar = Dex2jar.from(input)
+                    .computeFrames(true)
+                    .withExceptionHandler(new DexExceptionHandler() {
+                        public void handleFileException(Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        public void handleMethodTranslateException(Method method, DexMethodNode methodNode,
+                                                                   MethodVisitor mv, Exception e) {
+                            e.printStackTrace();
+                        }
+                    });
             d2Jar.to(output.toPath());
-        } catch (com.googlecode.d2j.DexException e) {
+        } catch (DexException e) {
             e.printStackTrace();
         } catch (Exception e) {
             BytecodeViewer.handleException(e);
@@ -59,7 +76,8 @@ public class Dex2Jar {
 
     public static synchronized void saveAsDex(File input, File output, boolean delete) {
         try {
-            com.googlecode.dex2jar.tools.Jar2Dex.main(input.getAbsolutePath(),
+            Jar2Dex.main(input.getAbsolutePath(),
+                    "-f",
                     "-o", output.getAbsolutePath(),
                     "-s", BytecodeViewer.viewer.getMinSdkVersion() + "");
             if (delete)
@@ -68,4 +86,5 @@ public class Dex2Jar {
             BytecodeViewer.handleException(e);
         }
     }
+
 }
