@@ -15,7 +15,7 @@ import static the.bytecode.club.bytecodeviewer.Constants.fs;
 import static the.bytecode.club.bytecodeviewer.Constants.nl;
 import static the.bytecode.club.bytecodeviewer.Constants.tempDirectory;
 import static the.bytecode.club.bytecodeviewer.translation.TranslatedStrings.ERROR;
-import static the.bytecode.club.bytecodeviewer.translation.TranslatedStrings.QUILTFLOWER;
+import static the.bytecode.club.bytecodeviewer.translation.TranslatedStrings.VINEFLOWER;
 
 
 /***************************************************************************
@@ -37,14 +37,14 @@ import static the.bytecode.club.bytecodeviewer.translation.TranslatedStrings.QUI
  ***************************************************************************/
 
 /**
- * A Quiltflower wrapper with all the options (except 2)
+ * A VineFlower wrapper with all the options (except 2)
  *
  * @author Nick Botticelli
  * @author Konloch
  * @author WaterWolf
  * @since 05/27/2022
  */
-public class QuiltFlowerDecompiler extends InternalDecompiler
+public class VineFlowerDecompiler extends InternalDecompiler
 {
     @Override
     public void decompileToZip(String sourceJar, String zipName)
@@ -89,7 +89,7 @@ public class QuiltFlowerDecompiler extends InternalDecompiler
             {
                 BytecodeViewer.sm.pauseBlocking();
                 ProcessBuilder pb = new ProcessBuilder(ArrayUtils.addAll(
-                        new String[]{ExternalResources.getSingleton().getJavaCommand(true), "-jar", ExternalResources.getSingleton().findLibrary("quiltflower")},
+                        new String[]{ExternalResources.getSingleton().getJavaCommand(true), "-jar", ExternalResources.getSingleton().findLibrary("vineflower")},
                         generateMainMethod(tempClass.getAbsolutePath(),
                                 new File(tempDirectory).getAbsolutePath())
                 ));
@@ -135,32 +135,32 @@ public class QuiltFlowerDecompiler extends InternalDecompiler
             }
         }
         
-        return QUILTFLOWER + " " + ERROR + "! " + ExceptionUI.SEND_STACKTRACE_TO +
+        return VINEFLOWER + " " + ERROR + "! " + ExceptionUI.SEND_STACKTRACE_TO +
                 nl + nl + TranslatedStrings.SUGGESTED_FIX_DECOMPILER_ERROR +
                 nl + nl + exception;
     }
 
     private String[] generateMainMethod(String className, String folder) {
         return new String[]{
-                "-rbr=" + r(BytecodeViewer.viewer.quilt_rbr.isSelected()),
-                "-rsy=" + r(BytecodeViewer.viewer.quilt_rsy.isSelected()),
-                "-din=" + r(BytecodeViewer.viewer.quilt_din.isSelected()),
-                "-dc4=" + r(BytecodeViewer.viewer.quilt_dc4.isSelected()),
-                "-das=" + r(BytecodeViewer.viewer.quilt_das.isSelected()),
-                "-hes=" + r(BytecodeViewer.viewer.quilt_hes.isSelected()),
-                "-hdc=" + r(BytecodeViewer.viewer.quilt_hdc.isSelected()),
-                "-dgs=" + r(BytecodeViewer.viewer.quilt_dgs.isSelected()),
-                "-ner=" + r(BytecodeViewer.viewer.quilt_ner.isSelected()),
-                "-den=" + r(BytecodeViewer.viewer.quilt_den.isSelected()),
-                "-rgn=" + r(BytecodeViewer.viewer.quilt_rgn.isSelected()),
-                "-bto=" + r(BytecodeViewer.viewer.quilt_bto.isSelected()),
-                "-nns=" + r(BytecodeViewer.viewer.quilt_nns.isSelected()),
-                "-uto=" + r(BytecodeViewer.viewer.quilt_uto.isSelected()),
-                "-udv=" + r(BytecodeViewer.viewer.quilt_udv.isSelected()),
-                "-rer=" + r(BytecodeViewer.viewer.quilt_rer.isSelected()),
-                "-fdi=" + r(BytecodeViewer.viewer.quilt_fdi.isSelected()),
-                "-asc=" + r(BytecodeViewer.viewer.quilt_asc.isSelected()),
-                "-ren=" + r(BytecodeViewer.viewer.quilt_ren.isSelected()),
+                "-rbr=" + r(BytecodeViewer.viewer.vine_rbr.isSelected()),
+                "-rsy=" + r(BytecodeViewer.viewer.vine_rsy.isSelected()),
+                "-din=" + r(BytecodeViewer.viewer.vine_din.isSelected()),
+                "-dc4=" + r(BytecodeViewer.viewer.vine_dc4.isSelected()),
+                "-das=" + r(BytecodeViewer.viewer.vine_das.isSelected()),
+                "-hes=" + r(BytecodeViewer.viewer.vine_hes.isSelected()),
+                "-hdc=" + r(BytecodeViewer.viewer.vine_hdc.isSelected()),
+                "-dgs=" + r(BytecodeViewer.viewer.vine_dgs.isSelected()),
+                "-ner=" + r(BytecodeViewer.viewer.vine_ner.isSelected()),
+                "-den=" + r(BytecodeViewer.viewer.vine_den.isSelected()),
+                "-rgn=" + r(BytecodeViewer.viewer.vine_rgn.isSelected()),
+                "-bto=" + r(BytecodeViewer.viewer.vine_bto.isSelected()),
+                "-nns=" + r(BytecodeViewer.viewer.vine_nns.isSelected()),
+                "-uto=" + r(BytecodeViewer.viewer.vine_uto.isSelected()),
+                "-udv=" + r(BytecodeViewer.viewer.vine_udv.isSelected()),
+                "-rer=" + r(BytecodeViewer.viewer.vine_rer.isSelected()),
+                "-fdi=" + r(BytecodeViewer.viewer.vine_fdi.isSelected()),
+                "-asc=" + r(BytecodeViewer.viewer.vine_asc.isSelected()),
+                "-ren=" + r(BytecodeViewer.viewer.vine_ren.isSelected()),
                 "--legacy-saving", className, folder};
     }
 

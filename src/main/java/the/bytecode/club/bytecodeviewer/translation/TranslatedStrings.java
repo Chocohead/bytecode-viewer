@@ -46,7 +46,7 @@ public enum TranslatedStrings
 	PROCYON,
 	CFR,
 	FERNFLOWER,
-	QUILTFLOWER,
+	VINEFLOWER,
 	KRAKATAU,
 	JDGUI,
 	JADX,

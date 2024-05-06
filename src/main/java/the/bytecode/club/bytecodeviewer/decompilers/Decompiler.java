@@ -33,7 +33,7 @@ public enum Decompiler
     PROCYON_DECOMPILER("Procyon Decompiler", "proycon", new ProcyonDecompiler()),
     CFR_DECOMPILER("CFR Decompiler", "cfr", new CFRDecompiler()),
     FERNFLOWER_DECOMPILER("FernFlower Decompiler", "fernflower", new FernFlowerDecompiler()),
-    QUILTFLOWER_DECOMPILER("QuiltFlower Decompiler", "quiltflower", new QuiltFlowerDecompiler()),
+    VINEFLOWER_DECOMPILER("VineFlower Decompiler", "vineflower", new VineFlowerDecompiler()),
     BYTECODE_DISASSEMBLER("Bytecode Disassembler", "bcvbd", new BytecodeDisassembler()),
     HEXCODE_VIEWER("Hexcode Viewer", "bcvhex", null),
     SMALI_DISASSEMBLER("Smali Disassembler", "smali", new SmaliDisassembler()),

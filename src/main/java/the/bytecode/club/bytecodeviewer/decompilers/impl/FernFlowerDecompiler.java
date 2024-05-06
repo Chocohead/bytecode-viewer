@@ -55,7 +55,7 @@ public class FernFlowerDecompiler extends InternalDecompiler
     private static final MethodHandle decompileMethodHandle;
 
     // TODO: Due to the package relocation needed to handle the identical classpaths of Fernflower
-    //  and Quiltflower, all references to Fernflower are redirected to Quiltflower by Maven shade
+    //  and VineFlower, all references to Fernflower are redirected to VineFlower by Maven shade
     //  plugin. Until a solution to this is found, reflection is a quick stop-gap.
     static
     {

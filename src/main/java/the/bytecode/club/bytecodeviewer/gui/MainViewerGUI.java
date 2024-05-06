@@ -224,29 +224,29 @@ public class MainViewerGUI extends JFrame
     public TranslatedJCheckBoxMenuItem asc = new TranslatedJCheckBoxMenuItem("Allow only ASCII characters in strings", TranslatedComponents.ALLOW_ONLY_ASCII_CHARACTERS_IN_STRINGS);
     public TranslatedJCheckBoxMenuItem ren = new TranslatedJCheckBoxMenuItem("Rename ambiguous classes and class elements", TranslatedComponents.RENAME_AMBIGUOUS_CLASSES_AND_CLASS_ELEMENTS);
 
-    //Quiltflower settings
-    public final JMenu quiltflowerSettingsSecondaryMenu = new TranslatedJMenu("QuiltFlower Settings", TranslatedComponents.QUILTFLOWER_SETTINGS);
-    public final JMenuItem quiltflowerSettings = new TranslatedJMenuItem("QuiltFlower Settings", TranslatedComponents.QUILTFLOWER_SETTINGS);
-    public SettingsDialog quiltflowerSettingsDialog;
-    public TranslatedJCheckBoxMenuItem quilt_rbr = new TranslatedJCheckBoxMenuItem("Hide bridge methods", TranslatedComponents.HIDE_BRIDGE_METHODS);
-    public TranslatedJCheckBoxMenuItem quilt_rsy = new TranslatedJCheckBoxMenuItem("Hide synthetic class members", TranslatedComponents.HIDE_SYNTHETIC_CLASS_MEMBERS);
-    public TranslatedJCheckBoxMenuItem quilt_din = new TranslatedJCheckBoxMenuItem("Decompile inner classes", TranslatedComponents.DECOMPILE_INNER_CLASSES);
-    public TranslatedJCheckBoxMenuItem quilt_dc4 = new TranslatedJCheckBoxMenuItem("Collapse 1.4 class references", TranslatedComponents.COLLAPSE_14_CLASS_REFERENCES);
-    public TranslatedJCheckBoxMenuItem quilt_das = new TranslatedJCheckBoxMenuItem("Decompile assertions", TranslatedComponents.DECOMPILE_ASSERTIONS);
-    public TranslatedJCheckBoxMenuItem quilt_hes = new TranslatedJCheckBoxMenuItem("Hide empty super invocation", TranslatedComponents.HIDE_EMPTY_SUPER_INVOCATION);
-    public TranslatedJCheckBoxMenuItem quilt_hdc = new TranslatedJCheckBoxMenuItem("Hide empty default constructor", TranslatedComponents.HIDE_EMPTY_DEFAULT_CONSTRUCTOR);
-    public TranslatedJCheckBoxMenuItem quilt_dgs = new TranslatedJCheckBoxMenuItem("Decompile generic signatures", TranslatedComponents.DECOMPILE_GENERIC_SIGNATURES);
-    public TranslatedJCheckBoxMenuItem quilt_ner = new TranslatedJCheckBoxMenuItem("Assume return not throwing exceptions", TranslatedComponents.ASSUME_RETURN_NOT_THROWING_EXCEPTIONS);
-    public TranslatedJCheckBoxMenuItem quilt_den = new TranslatedJCheckBoxMenuItem("Decompile enumerations", TranslatedComponents.DECOMPILE_ENUMERATIONS);
-    public TranslatedJCheckBoxMenuItem quilt_rgn = new TranslatedJCheckBoxMenuItem("Remove getClass() invocation", TranslatedComponents.REMOVE_GETCLASS_INVOCATION);
-    public TranslatedJCheckBoxMenuItem quilt_bto = new TranslatedJCheckBoxMenuItem("Interpret int 1 as boolean true", TranslatedComponents.INTERPRET_INT_1_AS_BOOLEAN_TRUE);
-    public TranslatedJCheckBoxMenuItem quilt_nns = new TranslatedJCheckBoxMenuItem("Allow for not set synthetic attribute", TranslatedComponents.ALLOW_FOR_NOT_SET_SYNTHETIC_ATTRIBUTE);
-    public TranslatedJCheckBoxMenuItem quilt_uto = new TranslatedJCheckBoxMenuItem("Consider nameless types as java.lang.Object", TranslatedComponents.CONSIDER_NAMELESS_TYPES_AS_JAVALANGOBJECT);
-    public TranslatedJCheckBoxMenuItem quilt_udv = new TranslatedJCheckBoxMenuItem("Reconstruct variable names from debug info", TranslatedComponents.RECONSTRUCT_VARIABLE_NAMES_FROM_DEBUG_INFO);
-    public TranslatedJCheckBoxMenuItem quilt_rer = new TranslatedJCheckBoxMenuItem("Remove empty exception ranges", TranslatedComponents.REMOVE_EMPTY_EXCEPTION_RANGES);
-    public TranslatedJCheckBoxMenuItem quilt_fdi = new TranslatedJCheckBoxMenuItem("Deinline finally structures", TranslatedComponents.DEINLINE_FINALLY_STRUCTURES);
-    public TranslatedJCheckBoxMenuItem quilt_asc = new TranslatedJCheckBoxMenuItem("Allow only ASCII characters in strings", TranslatedComponents.ALLOW_ONLY_ASCII_CHARACTERS_IN_STRINGS);
-    public TranslatedJCheckBoxMenuItem quilt_ren = new TranslatedJCheckBoxMenuItem("Rename ambiguous classes and class elements", TranslatedComponents.RENAME_AMBIGUOUS_CLASSES_AND_CLASS_ELEMENTS);
+    //Vineflower settings
+    public final JMenu vineFlowerSettingsSecondaryMenu = new TranslatedJMenu("VineFlower Settings", TranslatedComponents.VINEFLOWER_SETTINGS);
+    public final JMenuItem vineFlowerSettings = new TranslatedJMenuItem("VineFlower Settings", TranslatedComponents.VINEFLOWER_SETTINGS);
+    public SettingsDialog vineFlowerSettingsDialog;
+    public TranslatedJCheckBoxMenuItem vine_rbr = new TranslatedJCheckBoxMenuItem("Hide bridge methods", TranslatedComponents.HIDE_BRIDGE_METHODS);
+    public TranslatedJCheckBoxMenuItem vine_rsy = new TranslatedJCheckBoxMenuItem("Hide synthetic class members", TranslatedComponents.HIDE_SYNTHETIC_CLASS_MEMBERS);
+    public TranslatedJCheckBoxMenuItem vine_din = new TranslatedJCheckBoxMenuItem("Decompile inner classes", TranslatedComponents.DECOMPILE_INNER_CLASSES);
+    public TranslatedJCheckBoxMenuItem vine_dc4 = new TranslatedJCheckBoxMenuItem("Collapse 1.4 class references", TranslatedComponents.COLLAPSE_14_CLASS_REFERENCES);
+    public TranslatedJCheckBoxMenuItem vine_das = new TranslatedJCheckBoxMenuItem("Decompile assertions", TranslatedComponents.DECOMPILE_ASSERTIONS);
+    public TranslatedJCheckBoxMenuItem vine_hes = new TranslatedJCheckBoxMenuItem("Hide empty super invocation", TranslatedComponents.HIDE_EMPTY_SUPER_INVOCATION);
+    public TranslatedJCheckBoxMenuItem vine_hdc = new TranslatedJCheckBoxMenuItem("Hide empty default constructor", TranslatedComponents.HIDE_EMPTY_DEFAULT_CONSTRUCTOR);
+    public TranslatedJCheckBoxMenuItem vine_dgs = new TranslatedJCheckBoxMenuItem("Decompile generic signatures", TranslatedComponents.DECOMPILE_GENERIC_SIGNATURES);
+    public TranslatedJCheckBoxMenuItem vine_ner = new TranslatedJCheckBoxMenuItem("Assume return not throwing exceptions", TranslatedComponents.ASSUME_RETURN_NOT_THROWING_EXCEPTIONS);
+    public TranslatedJCheckBoxMenuItem vine_den = new TranslatedJCheckBoxMenuItem("Decompile enumerations", TranslatedComponents.DECOMPILE_ENUMERATIONS);
+    public TranslatedJCheckBoxMenuItem vine_rgn = new TranslatedJCheckBoxMenuItem("Remove getClass() invocation", TranslatedComponents.REMOVE_GETCLASS_INVOCATION);
+    public TranslatedJCheckBoxMenuItem vine_bto = new TranslatedJCheckBoxMenuItem("Interpret int 1 as boolean true", TranslatedComponents.INTERPRET_INT_1_AS_BOOLEAN_TRUE);
+    public TranslatedJCheckBoxMenuItem vine_nns = new TranslatedJCheckBoxMenuItem("Allow for not set synthetic attribute", TranslatedComponents.ALLOW_FOR_NOT_SET_SYNTHETIC_ATTRIBUTE);
+    public TranslatedJCheckBoxMenuItem vine_uto = new TranslatedJCheckBoxMenuItem("Consider nameless types as java.lang.Object", TranslatedComponents.CONSIDER_NAMELESS_TYPES_AS_JAVALANGOBJECT);
+    public TranslatedJCheckBoxMenuItem vine_udv = new TranslatedJCheckBoxMenuItem("Reconstruct variable names from debug info", TranslatedComponents.RECONSTRUCT_VARIABLE_NAMES_FROM_DEBUG_INFO);
+    public TranslatedJCheckBoxMenuItem vine_rer = new TranslatedJCheckBoxMenuItem("Remove empty exception ranges", TranslatedComponents.REMOVE_EMPTY_EXCEPTION_RANGES);
+    public TranslatedJCheckBoxMenuItem vine_fdi = new TranslatedJCheckBoxMenuItem("Deinline finally structures", TranslatedComponents.DEINLINE_FINALLY_STRUCTURES);
+    public TranslatedJCheckBoxMenuItem vine_asc = new TranslatedJCheckBoxMenuItem("Allow only ASCII characters in strings", TranslatedComponents.ALLOW_ONLY_ASCII_CHARACTERS_IN_STRINGS);
+    public TranslatedJCheckBoxMenuItem vine_ren = new TranslatedJCheckBoxMenuItem("Rename ambiguous classes and class elements", TranslatedComponents.RENAME_AMBIGUOUS_CLASSES_AND_CLASS_ELEMENTS);
     
     //Procyon
     public final JMenu procyonSettingsSecondaryMenu = new TranslatedJMenu("Procyon Settings", TranslatedComponents.PROCYON_SETTINGS);
@@ -681,29 +681,29 @@ public class MainViewerGUI extends JFrame
         fernFlowerSettingsDialog = new SettingsDialog(fernFlowerSettingsSecondaryMenu, new JPanel());
         fernFlowerSettings.addActionListener((e)-> fernFlowerSettingsDialog.showDialog());
 
-        //QUILTFLOWER SETTINGS
-        settingsMainMenu.add(useNewSettingsDialog ? quiltflowerSettings : quiltflowerSettingsSecondaryMenu);
-        quiltflowerSettingsSecondaryMenu.add(quilt_ren);
-        quiltflowerSettingsSecondaryMenu.add(quilt_dc4);
-        quiltflowerSettingsSecondaryMenu.add(quilt_nns);
-        quiltflowerSettingsSecondaryMenu.add(quilt_ner);
-        quiltflowerSettingsSecondaryMenu.add(quilt_bto);
-        quiltflowerSettingsSecondaryMenu.add(quilt_rgn);
-        quiltflowerSettingsSecondaryMenu.add(quilt_rer);
-        quiltflowerSettingsSecondaryMenu.add(quilt_rbr);
-        quiltflowerSettingsSecondaryMenu.add(quilt_rsy);
-        quiltflowerSettingsSecondaryMenu.add(quilt_hes);
-        quiltflowerSettingsSecondaryMenu.add(quilt_hdc);
-        quiltflowerSettingsSecondaryMenu.add(quilt_din);
-        quiltflowerSettingsSecondaryMenu.add(quilt_das);
-        quiltflowerSettingsSecondaryMenu.add(quilt_dgs);
-        quiltflowerSettingsSecondaryMenu.add(quilt_den);
-        quiltflowerSettingsSecondaryMenu.add(quilt_uto);
-        quiltflowerSettingsSecondaryMenu.add(quilt_udv);
-        quiltflowerSettingsSecondaryMenu.add(quilt_fdi);
-        quiltflowerSettingsSecondaryMenu.add(quilt_asc);
-        quiltflowerSettingsDialog = new SettingsDialog(quiltflowerSettingsSecondaryMenu, new JPanel());
-        quiltflowerSettings.addActionListener((e)-> quiltflowerSettingsDialog.showDialog());
+        //VINEFLOWER SETTINGS
+        settingsMainMenu.add(useNewSettingsDialog ? vineFlowerSettings : vineFlowerSettingsSecondaryMenu);
+        vineFlowerSettingsSecondaryMenu.add(vine_ren);
+        vineFlowerSettingsSecondaryMenu.add(vine_dc4);
+        vineFlowerSettingsSecondaryMenu.add(vine_nns);
+        vineFlowerSettingsSecondaryMenu.add(vine_ner);
+        vineFlowerSettingsSecondaryMenu.add(vine_bto);
+        vineFlowerSettingsSecondaryMenu.add(vine_rgn);
+        vineFlowerSettingsSecondaryMenu.add(vine_rer);
+        vineFlowerSettingsSecondaryMenu.add(vine_rbr);
+        vineFlowerSettingsSecondaryMenu.add(vine_rsy);
+        vineFlowerSettingsSecondaryMenu.add(vine_hes);
+        vineFlowerSettingsSecondaryMenu.add(vine_hdc);
+        vineFlowerSettingsSecondaryMenu.add(vine_din);
+        vineFlowerSettingsSecondaryMenu.add(vine_das);
+        vineFlowerSettingsSecondaryMenu.add(vine_dgs);
+        vineFlowerSettingsSecondaryMenu.add(vine_den);
+        vineFlowerSettingsSecondaryMenu.add(vine_uto);
+        vineFlowerSettingsSecondaryMenu.add(vine_udv);
+        vineFlowerSettingsSecondaryMenu.add(vine_fdi);
+        vineFlowerSettingsSecondaryMenu.add(vine_asc);
+        vineFlowerSettingsDialog = new SettingsDialog(vineFlowerSettingsSecondaryMenu, new JPanel());
+        vineFlowerSettings.addActionListener((e)-> vineFlowerSettingsDialog.showDialog());
         
         //CFIDE SETTINGS
         settingsMainMenu.add(useNewSettingsDialog ? bytecodeDecompilerSettings : bytecodeDecompilerSettingsSecondaryMenu);
@@ -886,26 +886,26 @@ public class MainViewerGUI extends JFrame
         hes.setSelected(true);
         hdc.setSelected(true);
 
-        // quiltflower
-        quilt_rbr.setSelected(true);
-        quilt_rsy.setSelected(false);
-        quilt_din.setSelected(true);
-        quilt_das.setSelected(true);
-        quilt_dgs.setSelected(false);
-        quilt_den.setSelected(true);
-        quilt_uto.setSelected(true);
-        quilt_udv.setSelected(true);
-        quilt_fdi.setSelected(true);
-        quilt_asc.setSelected(false);
-        quilt_ren.setSelected(false);
-        quilt_dc4.setSelected(true);
-        quilt_nns.setSelected(true);
-        quilt_ner.setSelected(true);
-        quilt_bto.setSelected(true);
-        quilt_rgn.setSelected(true);
-        quilt_rer.setSelected(true);
-        quilt_hes.setSelected(true);
-        quilt_hdc.setSelected(true);
+        // vineFlower
+        vine_rbr.setSelected(true);
+        vine_rsy.setSelected(false);
+        vine_din.setSelected(true);
+        vine_das.setSelected(true);
+        vine_dgs.setSelected(false);
+        vine_den.setSelected(true);
+        vine_uto.setSelected(true);
+        vine_udv.setSelected(true);
+        vine_fdi.setSelected(true);
+        vine_asc.setSelected(false);
+        vine_ren.setSelected(false);
+        vine_dc4.setSelected(true);
+        vine_nns.setSelected(true);
+        vine_ner.setSelected(true);
+        vine_bto.setSelected(true);
+        vine_rgn.setSelected(true);
+        vine_rer.setSelected(true);
+        vine_hes.setSelected(true);
+        vine_hdc.setSelected(true);
         
         //CFIDE
         debugHelpers.setSelected(true);
